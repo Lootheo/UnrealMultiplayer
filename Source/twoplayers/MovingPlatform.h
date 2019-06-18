@@ -7,7 +7,7 @@
 #include "MovingPlatform.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class TWOPLAYERS_API AMovingPlatform : public AStaticMeshActor
@@ -19,6 +19,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere)
-	float Speed = 20;
+		float Speed = 20;
 
+	UPROPERTY(EditAnywhere, Meta = (MakeEditWidget = true))
+		FVector TargetLocation;
 };
